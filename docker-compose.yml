@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+    arpm-app:
+        build:
+            args:
+                user: sammy
+                uid: 1001
+            context: ./
+            dockerfile: Dockerfile
+        image: arpm-app
+        container_name: arpm-app
+        restart: unless-stopped
+        working_dir: /var/www/
+        ports:
+            - 80:80
+        volumes:
+            - ./:/var/www
+        networks:
+            - arpm
+
+networks:
+    arpm:
+        external:
+            name: arpm
