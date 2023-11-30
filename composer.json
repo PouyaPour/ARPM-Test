@@ -1,0 +1,19 @@
+{
+  "name": "arpm/test",
+  "description": "description",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pouya",
+      "email": "p.pormohammed@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Route\\": "route/"
+    }
+  }
+}
